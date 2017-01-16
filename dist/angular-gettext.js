@@ -71,7 +71,8 @@ angular.module('gettext').factory('gettextCatalog', ["gettextPlurals", "gettextF
     // the string in the `po` files.
     // IE9, IE10 and IE11 reorders the attributes of tags.
     var test = '<span id="test" title="test" class="tested">test</span>';
-    var isHTMLModified = (angular.element('<span>' + test + '</span>').html() !== test);
+    // screw IE! we need performance rather than funtional
+    var isHTMLModified = false //(angular.element('<span>' + test + '</span>').html() !== test);
 
     var prefixDebug = function (string) {
         if (catalog.debug && catalog.currentLanguage !== catalog.baseLanguage) {
