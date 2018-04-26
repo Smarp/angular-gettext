@@ -1,3 +1,4 @@
+module.exports = 'gettext';
 /**
  * @ngdoc module
  * @name gettext
